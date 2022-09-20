@@ -1606,6 +1606,7 @@ PRODUCT_PACKAGES += \
     QtiTelephonyService \
     imssettings \
     uceShimService \
+    datastatusnotification \
     dpmserviceapp \
     qcrilmsgtunnel \
     ims \
