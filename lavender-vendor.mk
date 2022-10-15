@@ -1733,7 +1733,6 @@ PRODUCT_PACKAGES += \
     DeviceInfo \
     QtiTelephonyService \
     colorservice \
-    datastatusnotification \
     embms \
     imssettings \
     dpmserviceapp \
