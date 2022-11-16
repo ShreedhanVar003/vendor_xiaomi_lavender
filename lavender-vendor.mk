@@ -11,7 +11,11 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/etc/cne/Nexus/VZW/VZW_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/VZW/VZW_profiles.xml \
     vendor/xiaomi/lavender/proprietary/etc/permissions/com.qti.snapdragon.sdk.display.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.qti.snapdragon.sdk.display.xml \
     vendor/xiaomi/lavender/proprietary/system_ext/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_permissions.xml \
+    vendor/xiaomi/lavender/proprietary/lib/libFileMux.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libFileMux.so \
+    vendor/xiaomi/lavender/proprietary/lib/libOmxMux.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libOmxMux.so \
     vendor/xiaomi/lavender/proprietary/system_ext/lib64/fm_helium.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/fm_helium.so \
+    vendor/xiaomi/lavender/proprietary/lib64/libFileMux.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libFileMux.so \
+    vendor/xiaomi/lavender/proprietary/lib64/libOmxMux.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libOmxMux.so \
     vendor/xiaomi/lavender/proprietary/system_ext/lib64/libfm-hci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libfm-hci.so \
     vendor/xiaomi/lavender/proprietary/lib64/libsdm-disp-apis.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsdm-disp-apis.so \
     vendor/xiaomi/lavender/proprietary/lib64/libseemore.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libseemore.so \
@@ -33,6 +37,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/system_ext/lib64/libdpmtcm.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdpmtcm.so \
     vendor/xiaomi/lavender/proprietary/system_ext/lib64/vendor.qti.hardware.fm@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.fm@1.0.so \
     vendor/xiaomi/lavender/proprietary/system_ext/etc/perf/wlc_model.tflite:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/perf/wlc_model.tflite \
+    vendor/xiaomi/lavender/proprietary/system_ext/lib/libmmosal.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmmosal.so \
+    vendor/xiaomi/lavender/proprietary/system_ext/lib/libmmparser_lite.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmmparser_lite.so \
     vendor/xiaomi/lavender/proprietary/system_ext/lib/libqti-perfd-client_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libqti-perfd-client_system.so \
     vendor/xiaomi/lavender/proprietary/system_ext/lib/libqti-util_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libqti-util_system.so \
     vendor/xiaomi/lavender/proprietary/system_ext/lib/libqti_performance.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libqti_performance.so \
@@ -46,6 +52,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/system_ext/lib64/lib-imsvtutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvtutils.so \
     vendor/xiaomi/lavender/proprietary/system_ext/lib64/libimscamera_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libimscamera_jni.so \
     vendor/xiaomi/lavender/proprietary/system_ext/lib64/libimsmedia_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libimsmedia_jni.so \
+    vendor/xiaomi/lavender/proprietary/system_ext/lib64/libmmosal.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmmosal.so \
+    vendor/xiaomi/lavender/proprietary/system_ext/lib64/libmmparser_lite.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmmparser_lite.so \
     vendor/xiaomi/lavender/proprietary/system_ext/lib64/libqti-perfd-client_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqti-perfd-client_system.so \
     vendor/xiaomi/lavender/proprietary/system_ext/lib64/libqti-util_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqti-util_system.so \
     vendor/xiaomi/lavender/proprietary/system_ext/lib64/libqti_performance.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqti_performance.so \
@@ -1151,7 +1159,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libgcs-osal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgcs-osal.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libgcs.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgcs.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libgpudataproducer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgpudataproducer.so \
-    vendor/xiaomi/lavender/proprietary/vendor/lib/libgpustats.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgpustats.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgsl.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libgui_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgui_vendor.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libhal_dbg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhal_dbg.so \
@@ -1289,9 +1296,15 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmjpeg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmjpeg.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmjpeg_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmjpeg_interface.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmlib2d_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmlib2d_interface.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libmmosal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmosal.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmqjpeg_codec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmqjpeg_codec.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmqjpegdma.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmqjpegdma.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libmmsw_detail_enhancement.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmsw_detail_enhancement.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libmmsw_math.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmsw_math.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libmmsw_opencl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmsw_opencl.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libmmsw_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmsw_platform.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmpbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmpbase.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libmulawdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmulawdec.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/liboemcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib/liboemcrypto.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libois_bu63165.so:$(TARGET_COPY_OUT_VENDOR)/lib/libois_bu63165.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libois_lc898122.so:$(TARGET_COPY_OUT_VENDOR)/lib/libois_lc898122.so \
@@ -1339,7 +1352,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideoutils.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libvidhance.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvidhance.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libvidhance_gyro.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvidhance_gyro.so \
-    vendor/xiaomi/lavender/proprietary/vendor/lib/libvqzip.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvqzip.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:$(TARGET_COPY_OUT_VENDOR)/lib/mediadrm/libwvdrmengine.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/mibokeh_660_opencl.bin:$(TARGET_COPY_OUT_VENDOR)/lib/mibokeh_660_opencl.bin \
     vendor/xiaomi/lavender/proprietary/vendor/lib/miwatermark.so:$(TARGET_COPY_OUT_VENDOR)/lib/miwatermark.so \
@@ -1406,10 +1418,25 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/lib-rtpsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpsl.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/lib-siputility.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-siputility.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/lib-uceservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-uceservice.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libAlacSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libAlacSwDec.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libApeSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libApeSwDec.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libC2D2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libC2D2.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libCB.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libCB.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libFlacSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libFlacSwDec.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libGPreqcancel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libGPreqcancel_svc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libGPreqcancel_svc.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libI420colorconvert.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libI420colorconvert.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libOmxAacDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxAacDec.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libOmxAlacDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxAlacDec.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libOmxAlacDecSw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxAlacDecSw.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libOmxAmrDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxAmrDec.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libOmxAmrwbplusDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxAmrwbplusDec.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libOmxApeDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxApeDec.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libOmxApeDecSw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxApeDecSw.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libOmxEvrcDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxEvrcDec.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libOmxG711Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxG711Dec.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libOmxQcelp13Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxQcelp13Dec.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libOmxWmaDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOmxWmaDec.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libOpenCL.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOpenCL.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libQSEEComAPI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQSEEComAPI.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libSecureUILib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSecureUILib.so \
@@ -1443,7 +1470,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libgf_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgf_hal.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libgoodixhwfingerprint.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgoodixhwfingerprint.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libgpudataproducer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpudataproducer.so \
-    vendor/xiaomi/lavender/proprietary/vendor/lib64/libgpustats.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpustats.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgsl.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libhdcpsrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdcpsrm.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_tm.so \
@@ -1466,6 +1492,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libmdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdsprpc.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libmlipay.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmlipay.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libmlipay@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmlipay@1.1.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmm-color-convertor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-color-convertor.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmm-hdcpmgr.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmcamera2_frame_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_frame_algorithm.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmcamera2_is.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_is.so \
@@ -1477,6 +1504,12 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmcamera_faceproc2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_faceproc2.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmcamera_tintless_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_tintless_algo.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmcamera_tintless_bg_pca_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_tintless_bg_pca_algo.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmosal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmosal.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmsw_detail_enhancement.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmsw_detail_enhancement.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmsw_math.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmsw_math.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmsw_opencl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmsw_opencl.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmsw_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmsw_platform.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmulawdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmulawdec.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libnetmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libnetmgr_common.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr_common.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libnetmgr_nr_fusion.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr_nr_fusion.so \
