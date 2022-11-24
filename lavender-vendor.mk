@@ -12,6 +12,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/system_ext/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_permissions.xml \
     vendor/xiaomi/lavender/proprietary/system_ext/lib64/fm_helium.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/fm_helium.so \
     vendor/xiaomi/lavender/proprietary/system_ext/lib64/libfm-hci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libfm-hci.so \
+    vendor/xiaomi/lavender/proprietary/lib64/libseemore.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libseemore.so \
     vendor/xiaomi/lavender/proprietary/system_ext/bin/dpmd:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/dpmd \
     vendor/xiaomi/lavender/proprietary/system_ext/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/dpm/dpm.conf \
     vendor/xiaomi/lavender/proprietary/system_ext/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/dpmd.rc \
@@ -66,6 +67,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/bin/lowi-server:$(TARGET_COPY_OUT_VENDOR)/bin/lowi-server \
     vendor/xiaomi/lavender/proprietary/vendor/bin/mlipayd@1.1:$(TARGET_COPY_OUT_VENDOR)/bin/mlipayd@1.1 \
     vendor/xiaomi/lavender/proprietary/vendor/bin/mm-pp-dpps:$(TARGET_COPY_OUT_VENDOR)/bin/mm-pp-dpps \
+    vendor/xiaomi/lavender/proprietary/vendor/bin/mm-qcamera-app:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qcamera-app \
     vendor/xiaomi/lavender/proprietary/vendor/bin/msm_irqbalance:$(TARGET_COPY_OUT_VENDOR)/bin/msm_irqbalance \
     vendor/xiaomi/lavender/proprietary/vendor/bin/netmgrd:$(TARGET_COPY_OUT_VENDOR)/bin/netmgrd \
     vendor/xiaomi/lavender/proprietary/vendor/bin/pd-mapper:$(TARGET_COPY_OUT_VENDOR)/bin/pd-mapper \
@@ -81,6 +83,9 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/bin/thermal-engine:$(TARGET_COPY_OUT_VENDOR)/bin/thermal-engine \
     vendor/xiaomi/lavender/proprietary/vendor/bin/time_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/time_daemon \
     vendor/xiaomi/lavender/proprietary/vendor/bin/xtra-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/xtra-daemon \
+    vendor/xiaomi/lavender/proprietary/vendor/camera/fonts/MFYueYuan-Regular.ttf:$(TARGET_COPY_OUT_VENDOR)/camera/fonts/MFYueYuan-Regular.ttf \
+    vendor/xiaomi/lavender/proprietary/vendor/camera/fonts/MI+LanTing_GB+Outside+YS_V2.3_20160322.ttf:$(TARGET_COPY_OUT_VENDOR)/camera/fonts/MI+LanTing_GB+Outside+YS_V2.3_20160322.ttf \
+    vendor/xiaomi/lavender/proprietary/vendor/camera/fonts/MIUI_Time.ttf:$(TARGET_COPY_OUT_VENDOR)/camera/fonts/MIUI_Time.ttf \
     vendor/xiaomi/lavender/proprietary/vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
     vendor/xiaomi/lavender/proprietary/vendor/etc/acdbdata/MTP/MTP_General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_General_cal.acdb \
     vendor/xiaomi/lavender/proprietary/vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_Global_cal.acdb \
@@ -91,10 +96,14 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/MTP/MTP_workspaceFile.qwsp \
     vendor/xiaomi/lavender/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/GpuKernelRepo.pb:$(TARGET_COPY_OUT_VENDOR)/etc/camera/GpuKernelRepo.pb \
+    vendor/xiaomi/lavender/proprietary/vendor/etc/camera/MIUI_Time.ttf:$(TARGET_COPY_OUT_VENDOR)/etc/camera/MIUI_Time.ttf \
+    vendor/xiaomi/lavender/proprietary/vendor/etc/camera/Miui-Light.ttf:$(TARGET_COPY_OUT_VENDOR)/etc/camera/Miui-Light.ttf \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/beauty_ui9_intelligent_params.config:$(TARGET_COPY_OUT_VENDOR)/etc/camera/beauty_ui9_intelligent_params.config \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/csidtg_camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/csidtg_camera.xml \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/csidtg_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/csidtg_chromatix.xml \
+    vendor/xiaomi/lavender/proprietary/vendor/etc/camera/female_bg.png:$(TARGET_COPY_OUT_VENDOR)/etc/camera/female_bg.png \
+    vendor/xiaomi/lavender/proprietary/vendor/etc/camera/female_icon.png:$(TARGET_COPY_OUT_VENDOR)/etc/camera/female_icon.png \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/lavender_imx486_ofilm_i_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/lavender_imx486_ofilm_i_chromatix.xml \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/lavender_imx486_ofilm_i_dw9714_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/lavender_imx486_ofilm_i_dw9714_chromatix.xml \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/lavender_ov02a10_ofilm_i_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/lavender_ov02a10_ofilm_i_chromatix.xml \
@@ -109,13 +118,19 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/lavender_s5k5e8_ofilm_cn_i_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/lavender_s5k5e8_ofilm_cn_i_chromatix.xml \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/lavender_s5k5e8_sunny_cn_ii_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/lavender_s5k5e8_sunny_cn_ii_chromatix.xml \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/lavender_s5kgm1_ofilm_i_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/lavender_s5kgm1_ofilm_i_chromatix.xml \
+    vendor/xiaomi/lavender/proprietary/vendor/etc/camera/lavender_s5kgm1_ofilm_iii_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/lavender_s5kgm1_ofilm_iii_chromatix.xml \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/lavender_s5kgm1_ofilm_india_i_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/lavender_s5kgm1_ofilm_india_i_chromatix.xml \
+    vendor/xiaomi/lavender/proprietary/vendor/etc/camera/lavender_s5kgm1_ofilm_india_iii_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/lavender_s5kgm1_ofilm_india_iii_chromatix.xml \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/lavender_s5kgm1_sunny_ii_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/lavender_s5kgm1_sunny_ii_chromatix.xml \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/lavender_s5kgm1_sunny_india_ii_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/lavender_s5kgm1_sunny_india_ii_chromatix.xml \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/lf_facerank_model.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/lf_facerank_model.bin \
+    vendor/xiaomi/lavender/proprietary/vendor/etc/camera/male_bg.png:$(TARGET_COPY_OUT_VENDOR)/etc/camera/male_bg.png \
+    vendor/xiaomi/lavender/proprietary/vendor/etc/camera/male_icon.png:$(TARGET_COPY_OUT_VENDOR)/etc/camera/male_icon.png \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/megviifacepp_model:$(TARGET_COPY_OUT_VENDOR)/etc/camera/megviifacepp_model \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/model_back.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model_back.dlc \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/model_front.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/camera/model_front.dlc \
+    vendor/xiaomi/lavender/proprietary/vendor/etc/camera/score_bg.png:$(TARGET_COPY_OUT_VENDOR)/etc/camera/score_bg.png \
+    vendor/xiaomi/lavender/proprietary/vendor/etc/camera/score_icon.png:$(TARGET_COPY_OUT_VENDOR)/etc/camera/score_icon.png \
     vendor/xiaomi/lavender/proprietary/vendor/etc/camera/sdm_ys_32p_120_21_5_perturb50.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/sdm_ys_32p_120_21_5_perturb50.bin \
     vendor/xiaomi/lavender/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile1.xml \
     vendor/xiaomi/lavender/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile2.xml \
@@ -196,6 +211,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/firmware/a540_gpmu.fw2:$(TARGET_COPY_OUT_VENDOR)/firmware/a540_gpmu.fw2 \
     vendor/xiaomi/lavender/proprietary/vendor/firmware/cpp_firmware_v1_10_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_10_0.fw \
     vendor/xiaomi/lavender/proprietary/vendor/firmware/cpp_firmware_v1_12_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_12_0.fw \
+    vendor/xiaomi/lavender/proprietary/vendor/firmware/cpp_firmware_v1_12_1.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_12_1.fw \
     vendor/xiaomi/lavender/proprietary/vendor/firmware/cpp_firmware_v1_1_1.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_1_1.fw \
     vendor/xiaomi/lavender/proprietary/vendor/firmware/cpp_firmware_v1_1_6.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_1_6.fw \
     vendor/xiaomi/lavender/proprietary/vendor/firmware/cpp_firmware_v1_2_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_2_0.fw \
@@ -269,10 +285,12 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libacdb-fts.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdb-fts.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libacdbloader.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbloader.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libacdbrtac.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbrtac.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libactuator_dw9718s.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_dw9718s.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libactuator_lavender_imx486_ofilm_i_bu64982.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_lavender_imx486_ofilm_i_bu64982.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libactuator_lavender_imx486_ofilm_i_dw9714.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_lavender_imx486_ofilm_i_dw9714.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libactuator_lavender_ov12a10_sunny_ii_dw9714.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_lavender_ov12a10_sunny_ii_dw9714.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libactuator_lavender_s5kgm1_ofilm_i_dw9800.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_lavender_s5kgm1_ofilm_i_dw9800.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libactuator_lavender_s5kgm1_ofilm_iii_dw9800.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_lavender_s5kgm1_ofilm_iii_dw9800.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libactuator_lavender_s5kgm1_sunny_ii_dw9800.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_lavender_s5kgm1_sunny_ii_dw9800.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libadiertac.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadiertac.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libadm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadm.so \
@@ -477,6 +495,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_ov13855_ofilm_global_i_cpp_video_weixin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_ov13855_ofilm_global_i_cpp_video_weixin.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_ov13855_ofilm_global_i_cpp_video_weixin_res1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_ov13855_ofilm_global_i_cpp_video_weixin_res1.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_ov13855_ofilm_global_i_default_preview_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_ov13855_ofilm_global_i_default_preview_bu64297.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_ov13855_ofilm_global_i_default_preview_bu64297_its.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_ov13855_ofilm_global_i_default_preview_bu64297_its.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_ov13855_ofilm_global_i_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_ov13855_ofilm_global_i_default_video.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_ov13855_ofilm_global_i_default_video_bu64297.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_ov13855_ofilm_global_i_default_video_bu64297.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_ov13855_ofilm_global_i_default_video_bu64297_douyin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_ov13855_ofilm_global_i_default_video_bu64297_douyin.so \
@@ -816,7 +835,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_bokeh_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_bokeh_preview_3a.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_common.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_cpp_hfr_120.so \
-    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_cpp_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_cpp_hfr_240.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_cpp_hfr_60.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_cpp_hfr_90.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_cpp_liveshot.so \
@@ -838,8 +856,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_default_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_default_video_3a.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_hfr_120.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_hfr_120_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_hfr_120_3a.so \
-    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_hfr_240.so \
-    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_hfr_240_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_hfr_240_3a.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_hfr_60.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_hfr_60_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_hfr_60_3a.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_hfr_90.so \
@@ -862,6 +878,54 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_zsl_preview_3a_its.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_zsl_preview_3a_its.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_zsl_preview_3a_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_zsl_preview_3a_sn.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_i_zsl_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_i_zsl_video_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_4k_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_4k_preview_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_4k_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_4k_video_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_bokeh_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_bokeh_preview_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_common.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_hfr_120.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_hfr_60.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_hfr_90.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_liveshot.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_preview.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_preview_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_preview_sn.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_preview_sr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_preview_sr.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_preview_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_preview_video.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_snapshot.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_snapshot_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_snapshot_bokeh.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_snapshot_hdr.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_snapshot_hht.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_snapshot_hht.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_snapshot_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_snapshot_sn.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_snapshot_sr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_snapshot_sr.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_video.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_video_4k.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_video_weixin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_video_weixin.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_video_weixin_res1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_cpp_video_weixin_res1.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_default_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_default_preview_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_default_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_default_video_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_hfr_120.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_hfr_120_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_hfr_120_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_hfr_60.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_hfr_60_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_hfr_60_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_hfr_90.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_hfr_90_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_hfr_90_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_pano_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_pano_preview_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_postproc.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_preview.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_preview_cts.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_preview_cts.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_snapshot.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_snapshot_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_snapshot_bokeh.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_snapshot_hdr.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_snapshot_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_snapshot_sn.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_video.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_video_4k.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_video_weixin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_video_weixin.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_video_weixin_res1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_video_weixin_res1.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_weixin_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_weixin_video_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_weixin_video_3a_res1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_weixin_video_3a_res1.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_zsl_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_zsl_preview_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_zsl_preview_3a_its.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_zsl_preview_3a_its.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_zsl_preview_3a_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_zsl_preview_3a_sn.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_iii_zsl_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_iii_zsl_video_3a.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_i_4k_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_i_4k_preview_3a.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_i_4k_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_i_4k_video_3a.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_i_bokeh_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_i_bokeh_preview_3a.so \
@@ -910,12 +974,59 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_i_zsl_preview_3a_its.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_i_zsl_preview_3a_its.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_i_zsl_preview_3a_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_i_zsl_preview_3a_sn.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_i_zsl_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_i_zsl_video_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_4k_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_4k_preview_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_4k_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_4k_video_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_bokeh_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_bokeh_preview_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_common.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_hfr_120.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_hfr_60.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_hfr_90.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_liveshot.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_preview.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_preview_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_preview_sn.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_preview_sr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_preview_sr.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_preview_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_preview_video.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_snapshot.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_snapshot_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_snapshot_bokeh.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_snapshot_hdr.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_snapshot_hht.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_snapshot_hht.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_snapshot_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_snapshot_sn.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_snapshot_sr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_snapshot_sr.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_video.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_video_4k.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_video_weixin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_video_weixin.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_video_weixin_res1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_cpp_video_weixin_res1.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_default_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_default_preview_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_default_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_default_video_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_hfr_120.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_hfr_120_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_hfr_120_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_hfr_60.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_hfr_60_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_hfr_60_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_hfr_90.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_hfr_90_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_hfr_90_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_pano_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_pano_preview_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_postproc.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_preview.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_preview_cts.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_preview_cts.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_snapshot.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_snapshot_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_snapshot_bokeh.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_snapshot_hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_snapshot_hdr.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_snapshot_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_snapshot_sn.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_video.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_video_4k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_video_4k.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_video_weixin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_video_weixin.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_video_weixin_res1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_video_weixin_res1.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_weixin_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_weixin_video_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_weixin_video_3a_res1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_weixin_video_3a_res1.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_zsl_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_zsl_preview_3a.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_zsl_preview_3a_its.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_zsl_preview_3a_its.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_zsl_preview_3a_sn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_zsl_preview_3a_sn.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_zsl_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_ofilm_india_iii_zsl_video_3a.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_4k_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_4k_preview_3a.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_4k_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_4k_video_3a.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_bokeh_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_bokeh_preview_3a.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_common.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_cpp_hfr_120.so \
-    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_cpp_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_cpp_hfr_240.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_cpp_hfr_60.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_cpp_hfr_90.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_cpp_liveshot.so \
@@ -938,8 +1049,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_default_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_default_video_3a.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_hfr_120.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_hfr_120_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_hfr_120_3a.so \
-    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_hfr_240.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_hfr_240.so \
-    vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_hfr_240_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_hfr_240_3a.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_hfr_60.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_hfr_60_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_hfr_60_3a.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_ii_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_ii_hfr_90.so \
@@ -1015,17 +1124,20 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libchromatix_lavender_s5kgm1_sunny_india_ii_zsl_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_lavender_s5kgm1_sunny_india_ii_zsl_video_3a.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libdepthmapwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdepthmapwrapper.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libdiag.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdiag.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libdng_sdkvendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdng_sdkvendor.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libdsd2pcm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsd2pcm.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libdsutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsutils.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libfastcvadsp_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastcvadsp_stub.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libfastcvopt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfastcvopt.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libflash_pmic.so:$(TARGET_COPY_OUT_VENDOR)/lib/libflash_pmic.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libft2vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libft2vendor.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libgcs-calwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgcs-calwrapper.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libgcs-ipc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgcs-ipc.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libgcs-osal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgcs-osal.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libgcs.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgcs.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libgpustats.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgpustats.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgsl.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libgui_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgui_vendor.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libhal_dbg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhal_dbg.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdr_tm.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libidl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libidl.so \
@@ -1140,8 +1252,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_lavender_s5k5e8_sunny_ii.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_lavender_s5k5e8_sunny_ii.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_lavender_s5k5e8_sunny_ii_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_lavender_s5k5e8_sunny_ii_eeprom.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_lavender_s5kgm1_ofilm_i.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_lavender_s5kgm1_ofilm_i.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_lavender_s5kgm1_ofilm_iii.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_lavender_s5kgm1_ofilm_iii.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_lavender_s5kgm1_sunny_ii.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_lavender_s5kgm1_sunny_ii.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_lavender_s5kgm1sp_ofilm_i_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_lavender_s5kgm1sp_ofilm_i_eeprom.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_lavender_s5kgm1sp_ofilm_iii_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_lavender_s5kgm1sp_ofilm_iii_eeprom.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_lavender_s5kgm1sp_sunny_ii_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_lavender_s5kgm1sp_sunny_ii_eeprom.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_le2464c_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_le2464c_eeprom.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_le2464c_master_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_le2464c_master_eeprom.so \
@@ -1153,6 +1267,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_ppeiscore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ppeiscore.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_quadracfa.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_quadracfa.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_rohm_brcg064gwz_3_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_rohm_brcg064gwz_3_eeprom.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_stillmore_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_stillmore_lib.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_sunny_ov13855_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sunny_ov13855_eeprom.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_sw2d_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sw2d_lib.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libmmcamera_thread_services.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_thread_services.so \
@@ -1196,9 +1311,11 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libsdm-diag.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdm-diag.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libsdmextension.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdmextension.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libsdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdsprpc.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libseemore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libseemore.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libsensor1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor1.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libsensor_reg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensor_reg.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libsmwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsmwrapper.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/libstdc++.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstdc++.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libsymphony-cpu.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphony-cpu.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libsymphonypower.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsymphonypower.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libsysmon_cdsp_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsysmon_cdsp_skel.so \
@@ -1209,6 +1326,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib/libvqzip.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvqzip.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:$(TARGET_COPY_OUT_VENDOR)/lib/mediadrm/libwvdrmengine.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/mibokeh_660_opencl.bin:$(TARGET_COPY_OUT_VENDOR)/lib/mibokeh_660_opencl.bin \
+    vendor/xiaomi/lavender/proprietary/vendor/lib/miwatermark.so:$(TARGET_COPY_OUT_VENDOR)/lib/miwatermark.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/rfsa/adsp/dirac_resource.dar:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/dirac_resource.dar \
     vendor/xiaomi/lavender/proprietary/vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_800h_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/rfsa/adsp/libFastRPC_UTF_Forward_800h_skel.so \
@@ -1333,6 +1451,16 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libmdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdsprpc.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libmlipay.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmlipay.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libmlipay@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmlipay@1.1.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmcamera2_frame_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_frame_algorithm.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmcamera2_is.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_is.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmcamera2_q3a_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_q3a_core.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmcamera2_stats_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_stats_algorithm.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmcamera2_stats_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera2_stats_lib.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmcamera_dbg.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_dbg.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmcamera_faceproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_faceproc.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmcamera_faceproc2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_faceproc2.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmcamera_tintless_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_tintless_algo.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libmmcamera_tintless_bg_pca_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_tintless_bg_pca_algo.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libnetmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libnetmgr_common.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr_common.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libnetmgr_nr_fusion.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr_nr_fusion.so \
@@ -1378,6 +1506,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libsdmextension.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdmextension.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libsdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdsprpc.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libsecureui_svcsock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui_svcsock.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libseemore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libseemore.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libsensor1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor1.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libsensor_reg.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_reg.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libsettings.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsettings.so \
@@ -1390,6 +1519,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtime_genoff.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libvendor.goodix.hardware.interfaces.biometrics.fingerprint@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendor.goodix.hardware.interfaces.biometrics.fingerprint@2.1.so \
+    vendor/xiaomi/lavender/proprietary/vendor/lib64/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvideoutils.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libwms.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwms.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libwqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwqe.so \
     vendor/xiaomi/lavender/proprietary/vendor/lib64/libwvhidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwvhidl.so \
